@@ -1,0 +1,7 @@
+services:
+  - type: static
+    name: bw-hotel-site
+    staticPublishPath: ./
+    envVars:
+      - key: SKIP_INSTALL_DEPS
+        value: "true"
