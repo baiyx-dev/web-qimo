@@ -88,12 +88,13 @@ function playLoaderIntro() {
   });
 
   loaderTimeline
+    .from(".page-loader-logo", { y: 18, opacity: 0, scale: 0.96, duration: 0.9 })
     .from(".page-loader-brand span", {
       y: 22,
       opacity: 0,
       duration: 0.72,
       stagger: 0.08
-    })
+    }, "-=0.4")
     .from(".page-loader-line", { scaleX: 0.72, opacity: 0, duration: 0.7 }, "-=0.35")
     .from(".page-loader-copy", { y: 12, opacity: 0, duration: 0.8 }, "-=0.45")
     .to(".page-loader-progress", { width: "100%", duration: 1.35, ease: "power1.inOut" }, "-=0.2")

@@ -58,6 +58,23 @@ textarea {
   overflow-x: hidden;
 }
 
+.floating-logo {
+  position: fixed;
+  left: 26px;
+  bottom: 24px;
+  z-index: 25;
+  pointer-events: none;
+  opacity: 0.56;
+  mix-blend-mode: multiply;
+}
+
+.floating-logo img {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 16px rgba(20, 18, 16, 0.08));
+}
+
 .page-loader {
   position: fixed;
   inset: 0;
@@ -69,12 +86,20 @@ textarea {
 }
 
 .page-loader-inner {
-  width: min(420px, calc(100% - 48px));
+  width: min(480px, calc(100% - 48px));
   text-align: center;
 }
 
+.page-loader-logo {
+  width: min(300px, 58vw);
+  height: auto;
+  margin: 0 auto 18px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 28px rgba(0, 0, 0, 0.18));
+}
+
 .page-loader-brand {
-  margin: 0 0 22px;
+  margin: 0 0 18px;
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(2.8rem, 6vw, 4.4rem);
   letter-spacing: 0.14em;
@@ -138,8 +163,15 @@ textarea {
 }
 
 .brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   font-size: 1.16rem;
   font-weight: 600;
+}
+
+.brand-mark span {
+  line-height: 1;
 }
 
 .topbar-nav {
@@ -1079,6 +1111,10 @@ textarea {
   .topbar {
     width: calc(100% - 20px);
     padding: 14px 18px;
+  }
+
+  .floating-logo {
+    display: none;
   }
 
   .topbar-nav {

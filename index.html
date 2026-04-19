@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>B&W | 隐奢度假酒店沉浸式展示网站</title>
+    <title>B&W | 隐奢度假酒店沉浸式展示</title>
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23171816'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-size='30' font-family='Cormorant Garamond, serif' fill='%23f3ecdf'%3EA%3C/text%3E%3C/svg%3E"
@@ -21,8 +21,13 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="floating-logo" aria-hidden="true">
+      <img src="images/logo.png" alt="" />
+    </div>
+
     <div class="page-loader" id="pageLoader" aria-hidden="true">
       <div class="page-loader-inner">
+        <img class="page-loader-logo" src="images/logo.png" alt="B&W logo" />
         <p class="page-loader-brand" aria-label="B&W">
           <span>B</span>
           <span>&amp;</span>
@@ -37,7 +42,9 @@
 
     <div class="site-shell">
       <header class="topbar">
-        <a class="brand-mark" href="#hero" aria-label="B&W 首页">B&W</a>
+        <a class="brand-mark" href="#hero" aria-label="B&W 首页">
+          <span>B&amp;W</span>
+        </a>
         <nav class="topbar-nav" aria-label="主导航">
           <a href="#about">品牌理念</a>
           <a href="#spaces">空间展示</a>
