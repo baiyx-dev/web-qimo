@@ -53,6 +53,23 @@ function playHeroIntro() {
     );
 }
 
+function replayHeroBoat() {
+  gsap.fromTo(
+    ".hero-boat",
+    {
+      xPercent: -1.5,
+      yPercent: 22
+    },
+    {
+      xPercent: 0,
+      yPercent: 0,
+      duration: 2.6,
+      ease: "power1.out",
+      overwrite: "auto"
+    }
+  );
+}
+
 function playLoaderIntro() {
   if (!pageLoader) {
     presetHeroIntroState();
@@ -96,6 +113,15 @@ window.addEventListener("load", () => {
   playLoaderIntro();
 });
 
+ScrollTrigger.create({
+  trigger: "#hero",
+  start: "top top",
+  end: "bottom top",
+  onEnterBack: () => {
+    replayHeroBoat();
+  }
+});
+
 // Scroll-triggered section reveals keep motion subtle and consistent.
 gsap.utils.toArray(".scroll-fade").forEach((element) => {
   gsap.from(element, {
@@ -106,7 +132,7 @@ gsap.utils.toArray(".scroll-fade").forEach((element) => {
     scrollTrigger: {
       trigger: element,
       start: "top 82%",
-      once: true
+      toggleActions: "play none none reverse"
     }
   });
 });
@@ -123,7 +149,7 @@ gsap.utils.toArray(".reveal-panel").forEach((element) => {
     scrollTrigger: {
       trigger: element,
       start: "top 84%",
-      once: true
+      toggleActions: "play none none reverse"
     }
   });
 
@@ -135,7 +161,7 @@ gsap.utils.toArray(".reveal-panel").forEach((element) => {
       scrollTrigger: {
         trigger: element,
         start: "top 84%",
-        once: true
+        toggleActions: "play none none reverse"
       }
     });
   }
