@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B&W | 历史文化</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23171816'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-size='30' font-family='Cormorant Garamond, serif' fill='%23f3ecdf'%3EA%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="history.css" />
+  </head>
+  <body>
+    <header class="history-topbar">
+      <a class="history-brand" href="index.html">
+        <img src="images/logo.png" alt="B&W logo" />
+        <span>B&amp;W</span>
+      </a>
+      <div class="history-topbar-actions">
+        <span>历史文化</span>
+        <a href="index.html">返回首页</a>
+      </div>
+    </header>
+
+    <main class="history-page">
+      <section class="history-shell">
+        <div class="history-track" id="historyTrack">
+          <section class="history-slide is-active" data-title="海岸意象">
+            <div class="history-slide-media">
+              <img src="images/首屏-海面.png" alt="海岸意象" />
+            </div>
+            <div class="history-slide-content">
+              <p class="history-eyebrow">01 / 海岸意象</p>
+              <h1>海，是整套视觉语言的起点</h1>
+              <p>
+                这一页不再虚构具体历史，而是回到页面真正依赖的文化意象：
+                海面、风、光线与开阔边界。它们不是被编造的背景故事，而是整个网站
+                在视觉与情绪上的起点。
+              </p>
+            </div>
+          </section>
+
+          <section class="history-slide" data-title="航海灵感">
+            <div class="history-slide-media">
+              <img src="images/首屏-游艇.png" alt="航海灵感" />
+            </div>
+            <div class="history-slide-content">
+              <p class="history-eyebrow">02 / 航海灵感</p>
+              <h2>缓慢航行，是品牌节奏感的视觉隐喻</h2>
+              <p>
+                游艇与海面的组合，并不对应某段具体史实，而是象征一种从容进入、
+                缓慢靠近、逐步展开的观看方式。首页动画与页面留白，也都围绕这种
+                节奏被组织起来。
+              </p>
+            </div>
+          </section>
+
+          <section class="history-slide" data-title="建筑语言">
+            <div class="history-slide-media">
+              <img src="images/理念-建筑.jpg" alt="建筑语言" />
+            </div>
+            <div class="history-slide-content">
+              <p class="history-eyebrow">03 / 建筑语言</p>
+              <h2>建筑不解释风景，而是为风景留出位置</h2>
+              <p>
+                页面中的建筑图像承担的是风格表达，而不是历史考据。大面积体块、
+                柔和界面、向海的开口与克制的材料，共同构成了“隐奢海岸酒店”这一
+                视觉概念的建筑外壳。
+              </p>
+            </div>
+          </section>
+
+          <section class="history-slide" data-title="室内气质">
+            <div class="history-slide-media">
+              <img src="images/空间-会客厅.jpg" alt="室内气质" />
+            </div>
+            <div class="history-slide-content">
+              <p class="history-eyebrow">04 / 室内气质</p>
+              <h2>温润材质与低照光线，共同决定了停留感</h2>
+              <p>
+                木、石、织物和暖色灯光，是这一类空间表达中最稳定的情绪支撑。
+                它们让页面从“展示”转向“停留”，也让文字与图片更接近安静、
+                克制和可居住的状态。
+              </p>
+            </div>
+          </section>
+
+          <section class="history-slide" data-title="当代表达">
+            <div class="history-slide-media">
+              <img src="images/过渡-套房全景.jpg" alt="当代表达" />
+            </div>
+            <div class="history-slide-content">
+              <p class="history-eyebrow">05 / 当代表达</p>
+              <h2>最终呈现的不是历史叙述，而是品牌化的空间叙事</h2>
+              <p>
+                对这个网页来说，更重要的不是提供未经验证的背景故事，而是把海岸、
+                建筑、室内与慢生活方式转化成一套统一的前端表达。这样内容才成立，
+                也更适合作为课程作品展示。
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <div class="history-controls">
+          <button class="history-arrow" id="historyPrev" type="button" aria-label="上一张">
+            <span>&larr;</span>
+          </button>
+          <button class="history-arrow" id="historyNext" type="button" aria-label="下一张">
+            <span>&rarr;</span>
+          </button>
+        </div>
+
+        <aside class="history-dots" aria-label="历史文化分页">
+          <button class="history-dot is-active" type="button" data-index="0"><span>海岸意象</span></button>
+          <button class="history-dot" type="button" data-index="1"><span>航海灵感</span></button>
+          <button class="history-dot" type="button" data-index="2"><span>建筑语言</span></button>
+          <button class="history-dot" type="button" data-index="3"><span>室内气质</span></button>
+          <button class="history-dot" type="button" data-index="4"><span>当代表达</span></button>
+        </aside>
+      </section>
+
+      <section class="history-article">
+        <div class="history-article-inner">
+          <div class="history-article-heading">
+            <p class="history-eyebrow">文化线索</p>
+            <h2>轮播图之下，是更完整的空间叙事</h2>
+          </div>
+
+          <div class="history-article-grid">
+            <article>
+              <h3>海岸气质</h3>
+              <p>
+                这个网页并不试图构造一段具体年代的传奇背景，而是把“临海”所带来的
+                开阔、宁静与慢节奏，转化成更稳定的视觉基调。海面、水平线和空气感，
+                共同定义了首页和内页的呼吸节奏。
+              </p>
+            </article>
+
+            <article>
+              <h3>空间表达</h3>
+              <p>
+                从建筑外观到室内材质，页面中的每一张图都在服务同一个目标：
+                让浏览者感受到克制、安静、隐奢而不喧哗的酒店气质。空间不是被堆砌，
+                而是通过光线、尺度和留白被缓慢组织出来。
+              </p>
+            </article>
+
+            <article>
+              <h3>节奏设计</h3>
+              <p>
+                顶部轮播承担的是第一视觉冲击，下面的文字则负责把这种气质解释清楚。
+                这样处理之后，页面既有展示感，也有课程作品所需要的表达层次，
+                不会停留在单纯的图像堆叠上。
+              </p>
+            </article>
+
+            <article>
+              <h3>课程导向</h3>
+              <p>
+                作为前端期末作业，这一页更适合被理解为“设计概念说明页”。
+                它通过轮播、排版和文字说明共同回答一个问题：
+                这个网站为什么长成现在这个样子，以及它想传达什么样的品牌体验。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="history.js"></script>
+  </body>
+</html>
