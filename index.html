@@ -3,357 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>B&W | 隐奢度假酒店沉浸式展示</title>
-    <link
-      rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23171816'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-size='30' font-family='Cormorant Garamond, serif' fill='%23f3ecdf'%3EA%3C/text%3E%3C/svg%3E"
-    />
+    <title>云栖旅选 | 酒店浏览</title>
     <meta
       name="description"
-      content="B&W 是一处由海岸、光影与静谧共同塑造的隐奢度假之所。"
+      content="面向文旅场景的酒店浏览与沉浸式展示平台，可筛选、排序并进入不同酒店详情。"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/hotel-list.css" />
   </head>
   <body>
-    <div class="floating-logo" aria-hidden="true">
-      <img src="images/logo.png" alt="" />
-    </div>
+    <header class="app-header">
+      <a class="brand" href="index.html" aria-label="云栖旅选首页">
+        <span>云栖旅选</span>
+      </a>
+      <nav class="header-nav" aria-label="主导航">
+        <a href="#hotels">精选酒店</a>
+        <a href="pages/hotel-bw.html">B&amp;W 详情</a>
+        <a href="pages/hotel-aurelle.html">AURELLE</a>
+        <a href="pages/hotel-nexora.html">NEXORA</a>
+        <a href="pages/hotel-sylvara.html">SYLVARA</a>
+      </nav>
+    </header>
 
-    <div class="page-loader" id="pageLoader" aria-hidden="true">
-      <div class="page-loader-inner">
-        <img class="page-loader-logo" src="images/logo.png" alt="B&W logo" />
-        <p class="page-loader-brand" aria-label="B&W">
-          <span>B</span>
-          <span>&amp;</span>
-          <span>W</span>
-        </p>
-        <div class="page-loader-line">
-          <span class="page-loader-progress"></span>
+    <main>
+      <section class="search-hero">
+        <div class="search-hero-media">
+          <img src="assets/images/common/index-hero.png" alt="高级酒店浏览平台背景" />
         </div>
-        <p class="page-loader-copy">静候光影入海</p>
-      </div>
-    </div>
-
-    <div class="site-shell">
-      <header class="topbar">
-        <a class="brand-mark" href="#hero" aria-label="B&W 首页">
-          <span>B&amp;W</span>
-        </a>
-        <nav class="topbar-nav" aria-label="主导航">
-          <a href="#about">品牌理念</a>
-          <a href="#spaces">空间展示</a>
-          <a href="#experience">度假体验</a>
-          <a href="history.html">历史文化</a>
-          <a href="#booking">预约入住</a>
-        </nav>
-      </header>
-
-      <main>
-        <section class="hero" id="hero">
-          <div class="hero-media">
-            <img class="hero-sea" src="images/首屏-海面.png" alt="平静延展的海面" />
-            <img class="hero-boat" src="images/首屏-游艇.png" alt="缓缓驶入画面的船只" />
-            <div class="hero-overlay"></div>
-          </div>
-
-          <div class="hero-content">
-            <p class="eyebrow reveal-text">海岸隐奢度假酒店</p>
-            <p class="hero-brand reveal-text">B&amp;W</p>
-            <h1 class="hero-title reveal-text">
-              <span>静谧与光</span>
-              <span>于此相遇</span>
-            </h1>
-            <p class="hero-copy reveal-text">
-              海风、天光与缓慢时间，
-              在此共同构成一场安静而克制的度假体验。
-            </p>
-            <div class="hero-actions reveal-text">
-              <a class="button button-primary" href="#about">探索度假之境</a>
-              <a class="button button-secondary" href="history.html">历史文化</a>
-              <a class="button button-secondary" href="#booking">立即预约</a>
-            </div>
-          </div>
-
-          <aside class="hero-aside reveal-panel" aria-label="首屏辅助视觉">
-            <img src="images/首屏-抵达.jpg" alt="B&W 私享抵达空间" />
-            <div class="hero-aside-copy">
-              <span>海岸静境</span>
-              <p>私密抵达，与被刻意放慢的时间感。</p>
-            </div>
-          </aside>
-        </section>
-
-        <section class="hero-bridge" aria-label="首屏过渡空间影像">
-          <div class="hero-bridge-media reveal-panel">
-            <img class="parallax-image" src="images/过渡-套房全景.jpg" alt="海岸套房全景空间" />
-          </div>
-          <div class="hero-bridge-copy scroll-fade">
-            <p class="eyebrow">Coastal Suite View</p>
-            <p>继续延展，进入度假的第一段呼吸。</p>
-          </div>
-        </section>
-
-        <section class="about section section-light" id="about">
-          <div class="section-heading scroll-fade">
-            <p class="eyebrow">品牌理念</p>
-            <h2>由光、海与静奢共同塑造的隐逸之所</h2>
-          </div>
-
-          <div class="about-grid">
-            <article class="about-story scroll-fade">
-              <p>
-                B&W 不以堆叠的方式表达奢华，而是让建筑适度退后，
-                把海平线、天光与空气留给真正的居住者。
-              </p>
-              <p>
-                从材质、尺度到光线流动，这里的一切都服务于更慢、更私密、
-                更接近自我节奏的度假方式。
-              </p>
-            </article>
-
-            <figure class="about-visual about-visual-wide">
-              <img
-                class="about-image"
-                src="images/理念-建筑.jpg"
-                alt="与海岸自然融合的建筑空间"
-              />
-            </figure>
-
-            <figure class="about-visual about-visual-tall">
-              <img
-                class="about-image"
-                src="images/理念-室内.jpg"
-                alt="温润光线与私密静谧的室内氛围"
-              />
-            </figure>
-
-            <div class="about-points scroll-fade">
-              <div>
-                <h3>建筑与自然</h3>
-                <p>以克制的体量与开合关系，让室内静谧自然过渡到海岸辽阔。</p>
-              </div>
-              <div>
-                <h3>海岸光影</h3>
-                <p>从晨曦微亮到傍晚低照，光线在空间表面缓慢流动，塑造层次与情绪。</p>
-              </div>
-              <div>
-                <h3>私密慢享</h3>
-                <p>将安静、松弛与分寸感留给居住者，让每段停留都回到自己的节奏里。</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="spaces section section-dark" id="spaces">
-          <div class="section-heading scroll-fade">
-            <p class="eyebrow">空间展示</p>
-            <h2>为静谧、私密与电影感而构成的度假空间</h2>
-          </div>
-
-          <div class="spaces-grid">
-            <article class="space-card space-card-tall hover-card scroll-fade">
-              <figure class="space-media reveal-panel">
-                <img class="parallax-image" src="images/空间-别墅.jpg" alt="私享别墅" />
-              </figure>
-              <div class="space-copy">
-                <h3>私享别墅</h3>
-                <p>以完整独处尺度，容纳松弛、隐逸与不被打扰的停留体验。</p>
-              </div>
-            </article>
-
-            <article class="space-card space-card-compact hover-card scroll-fade">
-              <figure class="space-media reveal-panel">
-                <img class="parallax-image" src="images/空间-客厅.jpg" alt="海景客厅" />
-              </figure>
-              <div class="space-copy">
-                <h3>海景客厅</h3>
-                <p>以开阔视野、柔和陈设与低声氛围，承接停留之间最放松的片刻。</p>
-              </div>
-            </article>
-
-            <article class="space-card space-card-text hover-card scroll-fade">
-              <figure class="space-media reveal-panel">
-                <img class="parallax-image" src="images/空间-会客厅.jpg" alt="静谧会客厅" />
-              </figure>
-              <div class="space-copy">
-                <h3>静谧会客厅</h3>
-                <p>适合阅读、交谈与黄昏停留，安静而不过度表达。</p>
-              </div>
-            </article>
-
-            <article class="space-card space-card-wide hover-card scroll-fade">
-              <figure class="space-media reveal-panel">
-                <img class="parallax-image" src="images/空间-标志性室内.jpg" alt="标志性室内空间" />
-              </figure>
-              <div class="space-copy">
-                <h3>标志性室内</h3>
-                <p>以定制细节、触感材质与克制比例，呈现安静而动人的高级感。</p>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="experience section section-light experience-highlight" id="experience">
-          <div class="section-heading scroll-fade">
-            <p class="eyebrow">度假体验</p>
-            <h2>超越停留本身的定制时刻</h2>
-          </div>
-
-          <div class="experience-list">
-            <article class="experience-item scroll-fade">
-              <figure class="experience-media reveal-panel">
-                <img class="parallax-image" src="images/体验-餐叙.jpg" alt="晨光餐叙" />
-              </figure>
-              <div class="experience-copy">
-                <span class="experience-index">01</span>
-                <h3>晨光餐叙</h3>
-                <p>
-                  在一天刚刚开始的海风与晨光中，享用应季料理与被光线温柔唤醒的餐桌时刻。
-                </p>
-              </div>
-            </article>
-
-            <article class="experience-item scroll-fade">
-              <figure class="experience-media reveal-panel">
-                <img class="parallax-image" src="images/体验-疗愈.jpg" alt="疗愈仪式" />
-              </figure>
-              <div class="experience-copy">
-                <span class="experience-index">02</span>
-                <h3>疗愈仪式</h3>
-                <p>
-                  通过舒缓护理、天然肌理与节奏克制的身心修复体验，让人重新回到安静之中。
-                </p>
-              </div>
-            </article>
-
-            <article class="experience-item scroll-fade">
-              <figure class="experience-media reveal-panel">
-                <img class="parallax-image" src="images/体验-桑拿.jpg" alt="静热桑疗" />
-              </figure>
-              <div class="experience-copy">
-                <span class="experience-index">03</span>
-                <h3>静热桑疗</h3>
-                <p>
-                  以木质温度、缓慢蒸汽与安静包裹感，让身体与情绪一同沉入松弛状态。
-                </p>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="booking section section-accent" id="booking">
-          <div class="booking-intro scroll-fade">
-            <p class="eyebrow">预约入住</p>
-            <h2>以更从容的方式，开启这段停留</h2>
-            
-            <div class="booking-note">
-              <span>礼宾预约</span>
-              <p>为保持私密与从容，我们以简洁信息预留专属接待节奏。</p>
-            </div>
-          </div>
-
-          <form class="booking-form scroll-fade" id="bookingForm" novalidate>
-            <div class="field">
-              <label for="guestName">姓名</label>
-              <input id="guestName" name="guestName" type="text" placeholder="请输入您的姓名" />
-              <small class="error-message"></small>
-            </div>
-
-            <div class="field">
-              <label for="contactInfo">联系方式</label>
-              <input
-                id="contactInfo"
-                name="contactInfo"
-                type="text"
-                placeholder="请输入邮箱或手机号"
-              />
-              <small class="error-message"></small>
-            </div>
-
-            <div class="field">
-              <label for="checkIn">入住日期</label>
-              <input id="checkIn" name="checkIn" type="date" />
-              <small class="error-message"></small>
-            </div>
-
-            <div class="field">
-              <label for="checkOut">离店日期</label>
-              <input id="checkOut" name="checkOut" type="date" />
-              <small class="error-message"></small>
-            </div>
-
-            <div class="field">
-              <label for="roomType">房型偏好</label>
-              <select id="roomType" name="roomType">
-                <option value="">请选择房型偏好</option>
-                <option value="Ocean Suite">海景套房</option>
-                <option value="Private Villa">私享别墅</option>
-                <option value="Signature Interior">标志性室内</option>
-              </select>
-              <small class="error-message"></small>
-            </div>
-
-            <div class="field field-wide">
-              <label for="specialRequest">特殊需求</label>
-              <textarea
-                id="specialRequest"
-                name="specialRequest"
-                rows="5"
-                placeholder="可填写入住偏好、餐饮需求、疗愈安排或其他特别说明。"
-              ></textarea>
-              <small class="error-message"></small>
-            </div>
-
-            <button class="button button-primary button-full" type="submit">
-              提交预约意向
-            </button>
-          </form>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <div>
-          <p class="footer-brand">B&amp;W</p>
-          <p>让静谧、海风与柔和光线，共同定义度假的节奏。</p>
+        <div class="search-hero-content">
+          <p class="eyebrow">Curated Hotel Stays</p>
+          <h1>发现值得停留的酒店</h1>
         </div>
-        <div>
-          <p>地址</p>
-          <p>陕西理工大学 B13号</p>
-        </div>
-        <div>
-          <p>联系方式</p>
-          <p>+86 15129555951</p>
-          <p>baiyx321378973@gmail.com</p>
-        </div>
-        <div>
-          <p>&copy; <span id="year"></span> B&amp;W. 版权所有。</p>
-        </div>
-      </footer>
-    </div>
 
-    <div class="modal" id="successModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
-      <div class="modal-backdrop" data-close-modal></div>
-      <div class="modal-card">
-        <button class="modal-close" type="button" aria-label="关闭弹窗" data-close-modal>
-          &times;
-        </button>
-        <p class="eyebrow">预约成功</p>
-        <h3 id="modalTitle">您的预约意向已提交</h3>
-        <p>
-          感谢您关注 B&amp;W。
-          您的表单信息已完成本地校验与成功提交演示。
-        </p>
-      </div>
-    </div>
+        <form class="search-panel" id="filters" aria-label="酒店搜索筛选">
+          <label>
+            <span>目的地</span>
+            <input id="keywordInput" type="search" placeholder="搜索城市、酒店名或标签" />
+          </label>
+          <label>
+            <span>入住</span>
+            <input type="date" />
+          </label>
+          <label>
+            <span>离店</span>
+            <input type="date" />
+          </label>
+          <label>
+            <span>价格</span>
+            <select id="priceSelect">
+              <option value="all">不限价格</option>
+              <option value="0-900">900 元以内</option>
+              <option value="900-1600">900-1600 元</option>
+              <option value="1600-99999">1600 元以上</option>
+            </select>
+          </label>
+          <button type="submit">搜索酒店</button>
+        </form>
+      </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+      <section class="hotel-board" id="hotels">
+        <div class="board-heading">
+          <div>
+            <p class="eyebrow">精选酒店</p>
+            <h2>从海岸、城市到森林秘境</h2>
+          </div>
+          <label class="sort-control">
+            <span>排序</span>
+            <select id="sortSelect">
+              <option value="recommended">推荐优先</option>
+              <option value="price-low">价格从低到高</option>
+              <option value="score-high">评分从高到低</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="tag-filters" aria-label="体验标签筛选">
+          <button class="tag-filter is-active" type="button" data-tag="all">全部</button>
+          <button class="tag-filter" type="button" data-tag="海景">海景</button>
+          <button class="tag-filter" type="button" data-tag="亲子">亲子</button>
+          <button class="tag-filter" type="button" data-tag="城市">城市</button>
+          <button class="tag-filter" type="button" data-tag="科技">科技</button>
+          <button class="tag-filter" type="button" data-tag="森林">森林</button>
+          <button class="tag-filter" type="button" data-tag="疗愈">疗愈</button>
+        </div>
+
+        <div class="hotel-layout">
+          <p class="result-count" id="resultCount"></p>
+          <div class="hotel-grid" id="hotelGrid"></div>
+          <p class="empty-state" id="emptyState">没有找到符合条件的酒店，请调整筛选条件。</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/hotel-list.js"></script>
   </body>
 </html>
