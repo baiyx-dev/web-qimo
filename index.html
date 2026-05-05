@@ -3,103 +3,193 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>云栖旅选 | 酒店浏览</title>
+    <title>云栖旅选 | 2026 Immersive Hotel Release</title>
     <meta
       name="description"
-      content="面向文旅场景的酒店浏览与沉浸式展示平台，可筛选、排序并进入不同酒店详情。"
+      content="云栖旅选 2026 沉浸式酒店发布页，以高端暗色视觉展示套房、餐饮、疗愈、影像、位置与预约体验。"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Noto+Serif+SC:wght@500;600;700&amp;family=Noto+Sans+SC:wght@400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/hotel-list.css" />
   </head>
   <body>
-    <header class="app-header">
-      <a class="brand" href="index.html" aria-label="云栖旅选首页">
+    <header class="release-nav" id="top">
+      <a class="brand" href="#hero" aria-label="云栖旅选首页">
         <span>云栖旅选</span>
+        <small>2026 冬季发布</small>
       </a>
-      <nav class="header-nav" aria-label="主导航">
-        <a href="#hotels">精选酒店</a>
-        <a href="pages/hotel-bw.html">B&amp;W 详情</a>
-        <a href="pages/hotel-aurelle.html">AURELLE</a>
-        <a href="pages/hotel-nexora.html">NEXORA</a>
-        <a href="pages/hotel-sylvara.html">SYLVARA</a>
+      <nav class="section-nav" aria-label="发布页分类导航">
+        <a class="nav-link is-active" href="#hero" data-nav="hero">首页</a>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="#suites" data-nav="suites">套房</a>
+          <div class="nav-submenu" aria-label="套房二级菜单">
+            <a href="pages/hotel-bw.html">B&amp;W</a>
+            <a href="pages/hotel-aurelle.html">Aurelle</a>
+            <a href="pages/hotel-nexora.html">Nexora</a>
+            <a href="pages/hotel-sylvara.html">Sylvara</a>
+          </div>
+        </div>
+        <a class="nav-link" href="#dining" data-nav="dining">餐饮</a>
+        <a class="nav-link" href="#wellness" data-nav="wellness">疗愈</a>
+        <a class="nav-link" href="#gallery" data-nav="gallery">图集</a>
+        <a class="nav-link" href="#location" data-nav="location">位置</a>
+        <a class="nav-link" href="#booking" data-nav="booking">预约</a>
       </nav>
+      <form class="nav-search" id="navSearch" aria-label="头部搜索">
+        <input name="keyword" type="search" placeholder="搜索酒店体验" />
+        <button type="submit" aria-label="搜索">⌕</button>
+      </form>
     </header>
 
     <main>
-      <section class="search-hero">
-        <div class="search-hero-media">
-          <img src="assets/images/common/index-hero.png" alt="高级酒店浏览平台背景" />
+      <section class="release-section hero-section" id="hero" data-section="hero">
+        <div class="hero-media parallax-frame">
+          <img class="hero-image parallax-image is-active" src="assets/images/common/index-hero.png" alt="云栖旅选沉浸式酒店发布首屏" />
+          <video
+            class="hero-video"
+            id="heroVideo"
+            src="assets/videos/release-hero.mp4"
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-label="云栖旅选发布页动态背景"
+          ></video>
         </div>
-        <div class="search-hero-content">
-          <p class="eyebrow">Curated Hotel Stays</p>
-          <h1>发现值得停留的酒店</h1>
+        <div class="media-switch" aria-label="媒体轮播控制">
+          <button class="media-arrow" id="mediaPrev" type="button" aria-label="上一张">‹</button>
+          <div class="media-dots">
+            <button class="media-dot is-active" type="button" data-media="image" aria-label="大图背景"></button>
+            <button class="media-dot" type="button" data-media="video" aria-label="视频背景"></button>
+          </div>
+          <button class="media-arrow" id="mediaNext" type="button" aria-label="下一张">›</button>
+          <button class="media-button is-active" type="button" data-media="image">Image</button>
+          <button class="media-button" type="button" data-media="video">Video</button>
         </div>
-
-        <form class="search-panel" id="filters" aria-label="酒店搜索筛选">
-          <label>
-            <span>目的地</span>
-            <input id="keywordInput" type="search" placeholder="搜索城市、酒店名或标签" />
-          </label>
-          <label>
-            <span>入住</span>
-            <input type="date" />
-          </label>
-          <label>
-            <span>离店</span>
-            <input type="date" />
-          </label>
-          <label>
-            <span>价格</span>
-            <select id="priceSelect">
-              <option value="all">不限价格</option>
-              <option value="0-900">900 元以内</option>
-              <option value="900-1600">900-1600 元</option>
-              <option value="1600-99999">1600 元以上</option>
-            </select>
-          </label>
-          <button type="submit">搜索酒店</button>
-        </form>
+        <div class="section-copy hero-copy">
+          <p class="eyebrow reveal-text">Cloud Hotel Selection / 2026</p>
+          <h1 class="release-title reveal-text">让目的地，在抵达之前先被感知。</h1>
+          <p class="release-note reveal-text">
+            一场为海岸、城市与森林重写的高端停留发布。
+          </p>
+        </div>
       </section>
 
-      <section class="hotel-board" id="hotels">
-        <div class="board-heading">
-          <div>
-            <p class="eyebrow">精选酒店</p>
-            <h2>从海岸、城市到森林秘境</h2>
-          </div>
-          <label class="sort-control">
-            <span>排序</span>
-            <select id="sortSelect">
-              <option value="recommended">推荐优先</option>
-              <option value="price-low">价格从低到高</option>
-              <option value="score-high">评分从高到低</option>
-            </select>
+      <section class="release-section split-section" id="suites" data-section="suites">
+        <div class="section-copy">
+          <p class="eyebrow reveal-text">Suites</p>
+          <h2 class="release-title reveal-text">把套房交还给光、海与安静。</h2>
+          <p class="release-note reveal-text">私密尺度、低声材质与完整视野，为停留重新定义边界。</p>
+        </div>
+        <a class="feature-media parallax-frame reveal-card" href="pages/hotel-bw.html">
+          <img class="parallax-image" src="assets/images/hotels/bw/suite-panorama.jpg" alt="B&W 海岸套房全景" />
+        </a>
+      </section>
+
+      <section class="release-section split-section section-reverse" id="dining" data-section="dining">
+        <div class="section-copy">
+          <p class="eyebrow reveal-text">Dining</p>
+          <h2 class="release-title reveal-text">晚餐成为日落的第二个现场。</h2>
+          <p class="release-note reveal-text">海边餐桌、玻璃穹顶与暖光服务，压低声音，放大感受。</p>
+        </div>
+        <a class="feature-media parallax-frame reveal-card" href="pages/hotel-aurelle.html">
+          <img class="parallax-image" src="assets/images/hotels/aurelle/restaurant.png" alt="奥瑞尔海湾酒店海边餐厅" />
+        </a>
+      </section>
+
+      <section class="release-section split-section" id="wellness" data-section="wellness">
+        <div class="section-copy">
+          <p class="eyebrow reveal-text">Wellness</p>
+          <h2 class="release-title reveal-text">疗愈不是项目，是空间的呼吸。</h2>
+          <p class="release-note reveal-text">森林水汽、石材温度与慢行路线，让身体先于语言放松。</p>
+        </div>
+        <a class="feature-media parallax-frame reveal-card" href="pages/hotel-sylvara.html">
+          <img class="parallax-image" src="assets/images/hotels/sylvara/forest-spa.png" alt="西尔瓦森林露天温泉" />
+        </a>
+      </section>
+
+      <section class="release-section gallery-section" id="gallery" data-section="gallery">
+        <div class="section-copy section-copy-center">
+          <p class="eyebrow reveal-text">Gallery</p>
+          <h2 class="release-title reveal-text">四种场景，一套新的旅行语言。</h2>
+          <p class="release-note reveal-text">海岸隐奢、海湾轻奢、城市科技与森林疗愈，被压缩成可滚动的视觉序列。</p>
+        </div>
+        <div class="gallery-grid">
+          <a class="gallery-card reveal-card" href="pages/hotel-bw.html">
+            <img src="assets/images/hotels/bw/space-villa.jpg" alt="B&W 私享别墅" />
+            <span>B&amp;W Coast</span>
+          </a>
+          <a class="gallery-card reveal-card" href="pages/hotel-aurelle.html">
+            <img src="assets/images/hotels/aurelle/hero-exterior.png" alt="Aurelle Bay Hotel 外观" />
+            <span>Aurelle Bay</span>
+          </a>
+          <a class="gallery-card reveal-card" href="pages/hotel-nexora.html">
+            <img src="assets/images/hotels/nexora/sky-bar.png" alt="NEXORA 空中酒吧" />
+            <span>NEXORA Skyline</span>
+          </a>
+          <a class="gallery-card reveal-card" href="pages/hotel-sylvara.html">
+            <img src="assets/images/hotels/sylvara/forest-path.png" alt="SYLVARA 森林栈道" />
+            <span>SYLVARA Forest</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="release-section location-section" id="location" data-section="location">
+        <div class="location-backdrop parallax-frame">
+          <img class="parallax-image" src="assets/images/hotels/nexora/hero-exterior.png" alt="奈索拉云境酒店城市夜景" />
+        </div>
+        <div class="section-copy location-copy">
+          <p class="eyebrow reveal-text">Location</p>
+          <h2 class="release-title reveal-text">从陆家嘴到香格里拉，目的地成为界面。</h2>
+          <p class="release-note reveal-text">每一处酒店都对应一种进入世界的方式。</p>
+        </div>
+      </section>
+
+      <section class="release-section booking-section" id="booking" data-section="booking">
+        <div class="section-copy">
+          <p class="eyebrow reveal-text">Booking</p>
+          <h2 class="release-title reveal-text">预约一次只属于你的发布体验。</h2>
+          <p class="release-note reveal-text">留下偏好，礼宾团队将以最克制的方式回应。</p>
+        </div>
+        <form class="booking-panel reveal-card" id="releaseBookingForm" novalidate>
+          <label>
+            <span>姓名</span>
+            <input name="guestName" type="text" placeholder="请输入姓名" />
+            <small></small>
           </label>
-        </div>
-
-        <div class="tag-filters" aria-label="体验标签筛选">
-          <button class="tag-filter is-active" type="button" data-tag="all">全部</button>
-          <button class="tag-filter" type="button" data-tag="海景">海景</button>
-          <button class="tag-filter" type="button" data-tag="亲子">亲子</button>
-          <button class="tag-filter" type="button" data-tag="城市">城市</button>
-          <button class="tag-filter" type="button" data-tag="科技">科技</button>
-          <button class="tag-filter" type="button" data-tag="森林">森林</button>
-          <button class="tag-filter" type="button" data-tag="疗愈">疗愈</button>
-        </div>
-
-        <div class="hotel-layout">
-          <p class="result-count" id="resultCount"></p>
-          <div class="hotel-grid" id="hotelGrid"></div>
-          <p class="empty-state" id="emptyState">没有找到符合条件的酒店，请调整筛选条件。</p>
-        </div>
+          <label>
+            <span>联系方式</span>
+            <input name="contact" type="text" placeholder="手机号或邮箱" />
+            <small></small>
+          </label>
+          <label>
+            <span>目的体验</span>
+            <select name="experience">
+              <option value="">请选择体验</option>
+              <option>B&W 海岸隐奢</option>
+              <option>Aurelle Bay 海湾轻奢</option>
+              <option>NEXORA 城市科技</option>
+              <option>SYLVARA 森林疗愈</option>
+            </select>
+            <small></small>
+          </label>
+          <button type="submit">提交预约</button>
+          <p class="booking-success" id="bookingSuccess">预约已提交，礼宾团队将尽快联系你。</p>
+        </form>
       </section>
     </main>
 
+    <footer class="release-footer">
+      <span>云栖旅选</span>
+      <a href="#hero">返回顶部</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="assets/js/hotel-list.js"></script>
   </body>
 </html>
