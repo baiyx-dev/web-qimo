@@ -1,6 +1,6 @@
 services:
   - type: static
-    name: bw-hotel-site
+    name: shiyan6
     staticPublishPath: ./
     envVars:
       - key: SKIP_INSTALL_DEPS

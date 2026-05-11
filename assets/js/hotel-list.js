@@ -9,6 +9,9 @@ const mediaPrev = document.getElementById("mediaPrev");
 const mediaNext = document.getElementById("mediaNext");
 const navSearch = document.getElementById("navSearch");
 const mediaItems = ["image", "video"];
+const limitMotion =
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+  Boolean(navigator.connection && navigator.connection.saveData);
 let activeMediaIndex = 0;
 
 function setActiveNav(sectionName) {
@@ -89,7 +92,7 @@ function moveHeroMedia(direction) {
 }
 
 function setupMotion() {
-  if (!window.gsap || !window.ScrollTrigger) return;
+  if (limitMotion || !window.gsap || !window.ScrollTrigger) return;
 
   gsap.registerPlugin(ScrollTrigger);
 

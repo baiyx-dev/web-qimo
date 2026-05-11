@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>云栖旅选 | 2026 Immersive Hotel Release</title>
+    <title>栖境旅宿 | 2026 Immersive Hotel Release</title>
     <meta
       name="description"
-      content="云栖旅选 2026 沉浸式酒店发布页，以高端暗色视觉展示套房、餐饮、疗愈、影像、位置与预约体验。"
+      content="栖境旅宿 2026 沉浸式酒店发布页，以高端暗色视觉展示套房、餐饮、疗愈、影像、位置与预约体验。"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preload" href="assets/images/common/index-hero.png" as="image" fetchpriority="high" />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Noto+Serif+SC:wght@500;600;700&amp;family=Noto+Sans+SC:wght@400;500;600;700&amp;display=swap"
       rel="stylesheet"
@@ -18,8 +20,8 @@
   </head>
   <body>
     <header class="release-nav" id="top">
-      <a class="brand" href="#hero" aria-label="云栖旅选首页">
-        <span>云栖旅选</span>
+      <a class="brand" href="#hero" aria-label="栖境旅宿首页">
+        <span>栖境旅宿</span>
         <small>2026 冬季发布</small>
       </a>
       <nav class="section-nav" aria-label="发布页分类导航">
@@ -48,7 +50,15 @@
     <main>
       <section class="release-section hero-section" id="hero" data-section="hero">
         <div class="hero-media parallax-frame">
-          <img class="hero-image parallax-image is-active" src="assets/images/common/index-hero.png" alt="云栖旅选沉浸式酒店发布首屏" />
+          <img
+            class="hero-image parallax-image is-active"
+            src="assets/images/common/index-hero.png"
+            width="1819"
+            height="865"
+            fetchpriority="high"
+            decoding="async"
+            alt="栖境旅宿沉浸式酒店发布首屏"
+          />
           <video
             class="hero-video"
             id="heroVideo"
@@ -57,7 +67,7 @@
             loop
             playsinline
             preload="metadata"
-            aria-label="云栖旅选发布页动态背景"
+            aria-label="栖境旅宿发布页动态背景"
           ></video>
         </div>
         <div class="media-switch" aria-label="媒体轮播控制">
@@ -86,7 +96,15 @@
           <p class="release-note reveal-text">私密尺度、低声材质与完整视野，为停留重新定义边界。</p>
         </div>
         <a class="feature-media parallax-frame reveal-card" href="pages/hotel-bw.html">
-          <img class="parallax-image" src="assets/images/hotels/bw/suite-panorama.jpg" alt="B&W 海岸套房全景" />
+          <img
+            class="parallax-image"
+            src="assets/images/hotels/bw/suite-panorama.jpg"
+            width="4428"
+            height="1604"
+            loading="lazy"
+            decoding="async"
+            alt="B&W 海岸套房全景"
+          />
         </a>
       </section>
 
@@ -97,7 +115,15 @@
           <p class="release-note reveal-text">海边餐桌、玻璃穹顶与暖光服务，压低声音，放大感受。</p>
         </div>
         <a class="feature-media parallax-frame reveal-card" href="pages/hotel-aurelle.html">
-          <img class="parallax-image" src="assets/images/hotels/aurelle/restaurant.png" alt="奥瑞尔海湾酒店海边餐厅" />
+          <img
+            class="parallax-image"
+            src="assets/images/hotels/aurelle/restaurant.png"
+            width="1672"
+            height="941"
+            loading="lazy"
+            decoding="async"
+            alt="奥瑞尔海湾酒店海边餐厅"
+          />
         </a>
       </section>
 
@@ -108,7 +134,15 @@
           <p class="release-note reveal-text">森林水汽、石材温度与慢行路线，让身体先于语言放松。</p>
         </div>
         <a class="feature-media parallax-frame reveal-card" href="pages/hotel-sylvara.html">
-          <img class="parallax-image" src="assets/images/hotels/sylvara/forest-spa.png" alt="西尔瓦森林露天温泉" />
+          <img
+            class="parallax-image"
+            src="assets/images/hotels/sylvara/forest-spa.png"
+            width="1536"
+            height="1024"
+            loading="lazy"
+            decoding="async"
+            alt="西尔瓦森林露天温泉"
+          />
         </a>
       </section>
 
@@ -120,19 +154,47 @@
         </div>
         <div class="gallery-grid">
           <a class="gallery-card reveal-card" href="pages/hotel-bw.html">
-            <img src="assets/images/hotels/bw/space-villa.jpg" alt="B&W 私享别墅" />
+            <img
+              src="assets/images/hotels/bw/space-villa.jpg"
+              width="4659"
+              height="3125"
+              loading="lazy"
+              decoding="async"
+              alt="B&W 私享别墅"
+            />
             <span>B&amp;W Coast</span>
           </a>
           <a class="gallery-card reveal-card" href="pages/hotel-aurelle.html">
-            <img src="assets/images/hotels/aurelle/hero-exterior.png" alt="Aurelle Bay Hotel 外观" />
+            <img
+              src="assets/images/hotels/aurelle/hero-exterior.png"
+              width="1672"
+              height="941"
+              loading="lazy"
+              decoding="async"
+              alt="Aurelle Bay Hotel 外观"
+            />
             <span>Aurelle Bay</span>
           </a>
           <a class="gallery-card reveal-card" href="pages/hotel-nexora.html">
-            <img src="assets/images/hotels/nexora/sky-bar.png" alt="NEXORA 空中酒吧" />
+            <img
+              src="assets/images/hotels/nexora/sky-bar.png"
+              width="1672"
+              height="941"
+              loading="lazy"
+              decoding="async"
+              alt="NEXORA 空中酒吧"
+            />
             <span>NEXORA Skyline</span>
           </a>
           <a class="gallery-card reveal-card" href="pages/hotel-sylvara.html">
-            <img src="assets/images/hotels/sylvara/forest-path.png" alt="SYLVARA 森林栈道" />
+            <img
+              src="assets/images/hotels/sylvara/forest-path.png"
+              width="1536"
+              height="1024"
+              loading="lazy"
+              decoding="async"
+              alt="SYLVARA 森林栈道"
+            />
             <span>SYLVARA Forest</span>
           </a>
         </div>
@@ -140,7 +202,15 @@
 
       <section class="release-section location-section" id="location" data-section="location">
         <div class="location-backdrop parallax-frame">
-          <img class="parallax-image" src="assets/images/hotels/nexora/hero-exterior.png" alt="奈索拉云境酒店城市夜景" />
+          <img
+            class="parallax-image"
+            src="assets/images/hotels/nexora/hero-exterior.png"
+            width="1672"
+            height="941"
+            loading="lazy"
+            decoding="async"
+            alt="奈索拉云境酒店城市夜景"
+          />
         </div>
         <div class="section-copy location-copy">
           <p class="eyebrow reveal-text">Location</p>
@@ -184,12 +254,12 @@
     </main>
 
     <footer class="release-footer">
-      <span>云栖旅选</span>
+      <span>栖境旅宿</span>
       <a href="#hero">返回顶部</a>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-    <script src="assets/js/hotel-list.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="assets/js/hotel-list.js" defer></script>
   </body>
 </html>

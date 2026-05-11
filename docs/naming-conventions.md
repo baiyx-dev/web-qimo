@@ -19,7 +19,7 @@
 
 - 页面：`pages/hotel-aurelle.html`
 - 样式：`assets/css/hotel-aurelle.css`
-- 脚本：`assets/js/hotel-aurelle.js`
+- 公共脚本：`assets/js/common.js`
 - 图片：`assets/images/hotels/aurelle/hero-exterior.png`
 
 ## 酒店编号
@@ -39,7 +39,7 @@
 
 1. 新建详情页：`pages/hotel-sunset.html`
 2. 新建样式：`assets/css/hotel-sunset.css`
-3. 新建脚本：`assets/js/hotel-sunset.js`
+3. 复用公共脚本：`assets/js/common.js`；只有新增页面存在专属交互时再添加页面脚本。
 4. 新建图片目录：`assets/images/hotels/sunset/`
 5. 图片按用途命名：
    - `hero-exterior.png`
