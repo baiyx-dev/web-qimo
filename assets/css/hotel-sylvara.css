@@ -11,6 +11,8 @@
   --panel-strong: rgba(17, 28, 20, 0.92);
   --line: rgba(232, 236, 233, 0.18);
   --shadow: 0 30px 80px rgba(7, 16, 10, 0.42);
+  --button-transition-duration: 0.35s;
+  --reveal-duration: 0.95s;
 }
 
 body {
@@ -137,28 +139,6 @@ body::before {
   max-width: 650px;
   margin: 0 0 34px;
   color: var(--muted);
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 52px;
-  padding: 0 24px;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: transform 0.35s ease, border-color 0.35s ease, background-color 0.35s ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
 }
 
 .button-primary {
@@ -449,17 +429,6 @@ body::before {
   background: var(--panel-strong);
   color: var(--text);
   box-shadow: var(--shadow);
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(32px);
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.95s ease, transform 0.95s ease;
 }
 
 @keyframes breatheMist {

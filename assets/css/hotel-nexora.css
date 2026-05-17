@@ -10,6 +10,9 @@
   --pink: #ff4fd8;
   --silver: #c7d0dc;
   --shadow: 0 28px 70px rgba(0, 0, 0, 0.42);
+  --button-transition-duration: 0.28s;
+  --reveal-duration: 0.72s;
+  --reveal-y: 28px;
 }
 
 body {
@@ -121,28 +124,6 @@ body::before {
   max-width: 610px;
   margin: 0 0 34px;
   color: var(--muted);
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 52px;
-  padding: 0 24px;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: transform 0.28s ease, border-color 0.28s ease, background-color 0.28s ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
 }
 
 .button-primary {
@@ -401,17 +382,6 @@ body::before {
   background: var(--panel-strong);
   color: var(--text);
   box-shadow: var(--shadow);
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.72s ease, transform 0.72s ease;
 }
 
 @media (max-width: 1060px) {

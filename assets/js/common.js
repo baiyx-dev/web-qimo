@@ -78,8 +78,11 @@ $(function () {
     var $contact = $form.find("[name='contact']");
     var $room = $form.find("[name='room']");
     var contactValue = $.trim($contact.val());
-    var emailValid = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(contactValue);
-    var phoneValid = /^(?:\+?86)?1[3-9]\d{9}$/.test(contactValue.replace(/[\s-]/g, ""));
+    var contactError = BookingValidation.contactMessage(
+      contactValue,
+      "请输入联系方式。",
+      "请输入有效手机号或邮箱。"
+    );
 
     $form.find("small").text("");
 
@@ -88,11 +91,8 @@ $(function () {
       valid = false;
     }
 
-    if (!contactValue) {
-      setError($contact, "请输入联系方式。");
-      valid = false;
-    } else if (!emailValid && !phoneValid) {
-      setError($contact, "请输入有效手机号或邮箱。");
+    if (contactError) {
+      setError($contact, contactError);
       valid = false;
     }
 

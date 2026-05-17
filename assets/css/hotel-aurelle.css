@@ -119,28 +119,6 @@ body {
   color: rgba(255, 250, 242, 0.78);
 }
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 52px;
-  padding: 0 24px;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-}
-
 .button-primary {
   background: var(--cream);
   color: var(--deep);
@@ -344,8 +322,6 @@ body {
 }
 
 .booking-form {
-  display: grid;
-  gap: 18px;
   padding: 34px;
   border: 1px solid rgba(255, 255, 255, 0.48);
   border-radius: 28px;
@@ -383,17 +359,6 @@ body {
   background: rgba(18, 49, 71, 0.94);
   color: var(--cream);
   box-shadow: var(--shadow);
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(32px);
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 @media (max-width: 1020px) {

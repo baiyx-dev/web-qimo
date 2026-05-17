@@ -205,12 +205,11 @@ const validators = {
     return "";
   },
   contactInfo: (value) => {
-    const trimmed = value.trim();
-    if (!trimmed) return "请输入邮箱或手机号。";
-    const emailValid = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(trimmed);
-    const phoneValid = /^(?:\+?86)?1[3-9]\d{9}$/.test(trimmed.replace(/[\s-]/g, ""));
-    if (!emailValid && !phoneValid) return "请输入有效的邮箱或手机号。";
-    return "";
+    return BookingValidation.contactMessage(
+      value,
+      "请输入邮箱或手机号。",
+      "请输入有效的邮箱或手机号。"
+    );
   },
   checkIn: (value) => (!value ? "请选择入住日期。" : ""),
   checkOut: (value) => (!value ? "请选择离店日期。" : ""),

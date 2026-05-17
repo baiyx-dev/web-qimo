@@ -31,8 +31,11 @@ function validateBookingForm() {
   const contact = bookingForm.contact;
   const experience = bookingForm.experience;
   const contactValue = contact.value.trim();
-  const emailValid = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(contactValue);
-  const phoneValid = /^(?:\+?86)?1[3-9]\d{9}$/.test(contactValue.replace(/[\s-]/g, ""));
+  const contactError = BookingValidation.contactMessage(
+    contactValue,
+    "请输入联系方式。",
+    "请输入有效手机号或邮箱。"
+  );
   let valid = true;
 
   if (!guestName.value.trim()) {
@@ -42,11 +45,8 @@ function validateBookingForm() {
     setFieldError(guestName, "");
   }
 
-  if (!contactValue) {
-    setFieldError(contact, "请输入联系方式。");
-    valid = false;
-  } else if (!emailValid && !phoneValid) {
-    setFieldError(contact, "请输入有效手机号或邮箱。");
+  if (contactError) {
+    setFieldError(contact, contactError);
     valid = false;
   } else {
     setFieldError(contact, "");
